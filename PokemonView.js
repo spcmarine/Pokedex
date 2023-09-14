@@ -13,24 +13,19 @@ class PokemonView {
 
       this.client.getPokeInfo(pokeName, pokeData => {
         console.log(pokeData);
-        // this.display(pokeData)
+        this.display(pokeData)
       });
     });
   }
 
-  display(repoData) {
-      let repoName = document.querySelector("#repo-name"); 
-      repoName.textContent = repoData.full_name;
-      let repoDescription = document.querySelector("#repo-description");
-      repoDescription.textContent = repoData.description;
-      let repoImage = document.querySelector("#repoImage")
-      repoImage.src = repoData.organization.avatar_url;
+  display(pokeData) {
+      let pokeName = document.querySelector("#Pokemon-name"); 
+      pokeName.textContent = pokeData.name;
+      let pokeImage = document.querySelector("#Pokemon-image");
+      pokeImage.src = pokeData.sprites.front_shiny;
+    //   let pokeDescription = document.querySelector("#Pokemon-description");
+    //   pokeDescription.textContent = pokdData.description;
       
-      
-      // console.log(repoData.organization.avatar_url)
-      // let container = document.querySelector("#main-container");
-      // container.appendChild(repoName);
-      // container.appendChild(repoDescription);
   }
   
   }
