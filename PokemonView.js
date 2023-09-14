@@ -26,16 +26,15 @@ class PokemonView {
       //   let pokeDescription = document.querySelector("#Pokemon-description");
       //   pokeDescription.textContent = pokdData.description;
       let pokeHeight = document.querySelector("#Pokemon-height");
-      pokeHeight.textContent = pokeData.height;
+      pokeHeight.textContent = "Height: " + pokeData.height;
       let pokeWeight = document.querySelector("#Pokemon-weight");
-      pokeWeight.textContent = pokeData.weight;
+      pokeWeight.textContent = "Weight: " + pokeData.weight;
       let pokeCategory = document.querySelector("#Pokemon-category");
-      pokeCategory.textContent = pokeData.moves[0].move.name;
+      pokeCategory.textContent = "Category: " + pokeData.moves[0].move.name;
       let pokeAbilities = document.querySelector("#Pokemon-abilities");
-      pokeAbilities.textContent = pokeData.abilities[0].ability.name;
+      pokeAbilities.textContent = "Abilities: " + pokeData.abilities[0].ability.name;
       
-      
-  }
+       }
   
   }
 
